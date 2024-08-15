@@ -1,0 +1,5 @@
+env
+movie_collections/movie_collections/.env
+**/__pycache__
+steps.md
+todo.md
