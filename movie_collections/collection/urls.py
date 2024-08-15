@@ -9,8 +9,6 @@ urlpatterns = [
          name='collection-list-create'),
     path('collection/<uuid:uuid>/',
          CollectionDetailView.as_view(), name='collection-detail'),
-    path('collection/<uuid:uuid>/movies/',
-         CollectionMoviesView.as_view(), name='collection-movies'),
     path('register/', UserRegistrationView.as_view(), name='user-register'),
 
 ]

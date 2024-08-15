@@ -5,6 +5,7 @@ from django.utils.deprecation import MiddlewareMixin
 
 class RequestCounterMiddleware(MiddlewareMixin):
     REQUEST_COUNT_KEY = 'request_count'
+    
 
     def process_request(self, request):
         if not cache.get(self.REQUEST_COUNT_KEY):

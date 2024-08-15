@@ -106,6 +106,10 @@ class CollectionMoviesView(generics.RetrieveAPIView):
     queryset = Collection.objects.all()
     serializer_class = CollectionSerializer
     permission_classes = [IsAuthenticated]
+    
+    def get_queryset(self):
+        uuid = self.kwargs['uuid']
+        return Movie.objects.filter(collection__uuid=uuid)
 
 
 class RequestCountView:
